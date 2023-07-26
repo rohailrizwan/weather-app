@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <section>
+        <nav class="navbar bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand logo-text" href="#">
+                    <img src="./images/logo.avif" alt="Logo" width="70" height="70" class="logo-img">
+                    <span class="nav-head"> Weather App </span>
+                </a>
+            </div>
+        </nav>
+    </section>
+
+    <main>
+        <div class="pt-5 pb-4">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-lg-12 col-sm-4 col-12 col-md-12 mb-4">
+                        <div class="row">
+                            <div class="col-md-2 col-lg-2 col-sm-12 col-6">
+                                <div class=" text-center rounded-2" id="karachi">
+                                    <h6 class=" pt-3">Karachi</h6>
+                                    <img src="" alt="" id="weather-img-kar" class="img-fluid pb-2 w-25">
+                                    <p id="karTemp" class=" pb-2"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-lg-2 col-sm-12 col-6">
+                                <div class=" text-center rounded-2" id="lahore">
+                                    <h6 class=" pt-3">Lahore</h6>
+                                    <img src="" alt="" id="weather-img-lah" class="img-fluid pb-2 w-25">
+                                    <p id="lahoreTemp" class=" pb-2"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-lg-2 col-sm-12 col-6">
+                                <div class=" text-center rounded-2" id="Melbourne">
+                                    <h6 class=" pt-3">Melbourne</h6>
+                                    <img src="" alt="" id="weather-img-mel" class="img-fluid pb-2 w-25">
+                                    <p id="MelTemp" class=" pb-2"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-lg-2 col-sm-12 col-6">
+                                <div class=" text-center rounded-2" id="london">
+                                    <h6 class=" pt-3">London</h6>
+                                    <img src="" alt="" id="weather-img-lon" class="img-fluid pb-2 w-25">
+                                    <p id="londonTemp" class=" pb-2"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-lg-2 col-sm-12 col-6">
+                                <div class=" text-center rounded-2" id="Washington">
+                                    <h6 class=" pt-3">Washington</h6>
+                                    <img src="" alt="" id="weather-img-wst" class="img-fluid pb-2 w-25">
+                                    <p id="wstTemp" class=" pb-2"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-lg-2 col-sm-12 col-6">
+                                <div class=" text-center rounded-2" id="sydney">
+                                    <h6 class=" pt-3">Sydney</h6>
+                                    <img src="" alt="" id="weather-img-sydney" class="img-fluid pb-2 w-25">
+                                    <p id="sydneyTemp" class=" pb-2"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-8 col-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 mb-5 searchcol">
+                                <div class="searchbox rounded-2">
+                                    <input type="text" placeholder="Enter city name" spellcheck="false" id="searchcity"
+                                        class="mb-2">
+                                    <button id="searchbtn">Weather Info</button>
+                                    <button id="clear">Clear</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="bg_color rounded-2" id="forcast">
+                                    <div class="weather text-center">
+                                        <img src="" alt="" class="weather-icon" id="weather-image">
+                                        <h1 class="temp" id="temperature"></h1>
+                                        <h1 class="city" id="cityname"></h1>
+                                    </div>
+                                    <div class="details text-center pb-4">
+                                        <div class="col details-col1">
+                                            <img src="./images/humidity.png" alt="" class="humidity-img">
+                                            <div class="humidity-div">
+                                                <p class="humidity fs-6 text-white mb-0" id="cityhumidity"></p>
+                                                <p class="text-white fs-6" id="humidity">humidity</p>
+                                            </div>
+                                        </div>
+                                        <div class=" col details-col2">
+                                            <img src="./images/wind.png" alt="" class="wind-img">
+                                            <div class="wind-div">
+                                                <p class="wind fs-6 text-white mb-0" id="windspeed"></p>
+                                                <p class="text-white fs-6">Wind speed</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1 class="text-center text-dark pt-4 pb-3">Recent searches</h1>
+        </div>
+        <div>
+            <div class="container">
+                <div class="row" id="displayweather">
+                   
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="app.js"></script>
+  <!-- Make sure the API key is correct and not expired
+<script async src="https://maps.googleapis.com/maps/api/js?key=4fb3ea530ea91d0e1c04f26d9b759862&libraries=places&callback=initMap">
+    function initMap() {
+    // Create a new map object centered at a specific latitude and longitude
+    var map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: 40.7128, lng: -74.0060 },
+      zoom: 12,
+    });
+}
+</script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
