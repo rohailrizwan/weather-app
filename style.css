@@ -12,7 +12,7 @@
     font-weight: 600;
 }
 
-#karachi ,#lahore ,#Melbourne , #london, #Washington, #sydney ,#yoursearch{
+#setcities ,#yoursearch{
     border-right: 2px solid gray;
     border-bottom: 2px solid gray;
     color: blue;
